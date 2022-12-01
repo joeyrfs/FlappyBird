@@ -17,7 +17,6 @@ IMAGENS_PASSARO = [
 pygame.font.init()
 FONTE_PONTOS = pygame.font.SysFont('arial', 50)
 
-
 class Passaro:
     IMGS = IMAGENS_PASSARO
     # animações da rotação
@@ -77,7 +76,6 @@ class Passaro:
             self.imagem = self.IMGS[0]
             self.contagem_imagem = 0
 
-
         # se o passaro tiver caindo eu não vou bater asa
         if self.angulo <= -80:
             self.imagem = self.IMGS[1]
@@ -89,9 +87,9 @@ class Passaro:
         retangulo = imagem_rotacionada.get_rect(center=pos_centro_imagem)
         tela.blit(imagem_rotacionada, retangulo.topleft)
 
+
     def get_mask(self):
         return pygame.mask.from_surface(self.imagem)
-
 
 class Cano:
     DISTANCIA = 200
